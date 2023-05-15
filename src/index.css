@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: heavitas;
+    src: url('./src/assets/Heavitas.ttf');
+}
+
+@font-face {
+    font-family: retroGaming;
+    src: url('./src/assets/RetroGaming.ttf');
+}
+
+body {
+    font-family: heavitas;
+}
+
+.term {
+    font-family: retroGaming;
+}
+
+.isActive {
+    display: inline-block;
+    position: relative;
+    color: #6E07F3;
+    transition: all 0.3s ease-in-out;
+}
+
+.isActive:hover {
+    transition: all 0.3s ease-in-out;
+    color: #5BE9B9;
+}
+
+.isActive:after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid #FFF;
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    bottom: -8px;
+    left: 50%;
+}
+
+.isActive:hover::after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid #FFF;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    bottom: -8px;
+    left: 50%;
+}
