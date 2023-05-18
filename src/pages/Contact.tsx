@@ -1,5 +1,5 @@
 import GithubIcon from '../assets/github_icon.svg'
-import LinkedInIcon from '../assets/linkedIn.svg'
+import LinkedinIcon from '../assets/linkedin.svg'
 
 export const Contact = () => {
     return (
@@ -14,7 +14,7 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex space-x-10 justify-center">
-                    <img src={LinkedInIcon} className='w-10' alt="Github" />
+                    <img src={LinkedinIcon} className='w-10' alt="Github" />
                     <img src={GithubIcon} className='w-10' alt="Github" />
                 </div>
             </div>
