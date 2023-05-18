@@ -1,4 +1,4 @@
-import { Home } from "../pages";
+import { Contact, Home } from "../pages";
 
 interface RouteInterface {
     to: string;
@@ -24,6 +24,6 @@ export const routes: RouteInterface[] = [
         to: "/contact",
         path: "/contact",
         name: "Contact",
-        Component: Home
+        Component: Contact
     },
 ]
