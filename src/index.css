@@ -8,3 +8,37 @@ body, html {
     padding: 0;
     @apply bg-purple;
 }
+
+.isActive {
+    display: inline-block;
+    position: relative;
+    color: #6919FF;
+    transition: all 0.3s ease-in-out;
+}
+
+.isActive:hover {
+    transition: all 0.3s ease-in-out;
+    color: #00FFA3;
+}
+
+.isActive:after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid #FFF;
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    bottom: -8px;
+    left: 50%;
+}
+
+.isActive:hover::after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid #FFF;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    bottom: -8px;
+    left: 50%;
+}
