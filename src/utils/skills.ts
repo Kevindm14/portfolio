@@ -39,7 +39,7 @@ export const skills: Skill[] = [
         ]
     },
     {
-        name: 'Project Management/Defect Tracking Systems',
+        name: 'Project Management',
         tech: [
             {name: "Jira"},
             {name: "Trello"},

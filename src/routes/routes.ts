@@ -11,7 +11,6 @@ interface RouteInterface {
 
 const HomeLazy = lazy(() => import("../pages/Home"));
 const ContactLazy = lazy(() => import("../pages/Contact"));
-const ProjectLazy = lazy(() => import("../pages/Project"));
 
 export const routes: RouteInterface[] = [
     {
@@ -19,12 +18,6 @@ export const routes: RouteInterface[] = [
         path: "/home",
         name: "Home",
         Component: HomeLazy
-    },
-    {
-        to: "/projects",
-        path: "/projects",
-        name: "Projects",
-        Component: ProjectLazy
     },
     {
         to: "/contact",

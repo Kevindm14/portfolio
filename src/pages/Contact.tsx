@@ -7,10 +7,8 @@ export const Contact = () => {
         <div className="flex flex-col justify-center text-center space-y-10 h-screen overflow-hidden">
             <h1 className="text-6xl uppercase w-80 font-extrabold mx-auto text-white">Get in Touch</h1>
 
-            <div className="flex text-white flex-col border-4 rounded-md mx-10"></div>
-
             <a href='mailto:kevindiazm.14@gmail.com'
-                className="border font-medium border-white text-white hover:bg-white hover:text-blue transition ease-in-out px-20 py-5 mx-auto">
+                className="border-4 font-medium border-white text-white hover:bg-white hover:text-blue transition ease-in-out px-20 py-5 mx-auto">
                 Say Hello 👋
             </a>
 

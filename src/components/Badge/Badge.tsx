@@ -1,5 +1,7 @@
+import {ReactNode} from "react";
+
 interface Props {
-    children: React.ReactNode;
+    children: ReactNode;
     bg: string;
     color: string;
     className?: string;

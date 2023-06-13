@@ -10,57 +10,11 @@ body, html {
 }
 
 .isActive {
-    display: inline-block;
-    position: relative;
-    color: #6919FF;
+    @apply text-white;
     transition: all 0.3s ease-in-out;
 }
 
 .isActive:hover {
     transition: all 0.3s ease-in-out;
-    color: #00FFA3;
+    @apply text-blue bg-white;
 }
-
-.isActive:after {
-    position: absolute;
-    content: '';
-    border-bottom: 3px solid #FFF;
-    width: 50%;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-50%);
-    bottom: -8px;
-    left: 50%;
-}
-
-.isActive:hover::after {
-    position: absolute;
-    content: '';
-    border-bottom: 3px solid #FFF;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-50%);
-    bottom: -8px;
-    left: 50%;
-}
-
-.spinner {
-    border-top-color: transparent !important;
-    border-right-color: transparent !important;
-    border-bottom-color: transparent !important;
-    border-left-color: #48bb78 !important;
-    animation: spin 1s infinite linear;
-    border-radius: 50%;
-    width: 6rem;
-    height: 6rem;
-    border-width: 2px;
-    margin: 0 auto;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
