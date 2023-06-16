@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import { routes } from "../../routes/routes"
+import { routes } from "../../router/routes"
 import { IoClose } from "react-icons/io5"
 
 interface Props {

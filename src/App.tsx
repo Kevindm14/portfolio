@@ -1,16 +1,7 @@
-import { Suspense } from "react"
-import { Navigation } from "./components"
-import { BrowserRouter } from "react-router-dom"
-import { Loading } from "./components/Loading/Loading"
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./router/routes";
+import { Loading } from "./components";
 
-const App = () => {
-  return (
-    <Suspense fallback={<Loading />}>
-      <BrowserRouter>
-        <Navigation />
-      </BrowserRouter>
-    </Suspense>
-  )
+export default function App() {
+    return <RouterProvider router={routes} fallbackElement={<Loading />}/>
 }
-
-export default App

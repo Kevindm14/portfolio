@@ -1,13 +1,13 @@
-import { NavLink, Navigate, Route, Routes } from "react-router-dom"
-import { routes } from "../../routes/routes"
 import { useState } from "react"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { Menu } from "../Menu/Menu"
 import { useModal } from "../../hooks/useModal"
+import { routes } from "../../router/routes"
+import { NavLink } from "react-router-dom"
 
 export const Navigation = () => {
     const classesNav = 'py-8 text-white px-5 sm:px-12 font-bold md:px-20 flex justify-between items-center top-0 sticky transition ease-in-out delay-150 z-50 relative'
-    const classesLink = 'py-2 px-5 text-white border-2 border-white hover:bg-blue hover:text-white transition ease-in-out'
+    const classesLink = 'py-2 px-5 text-white border-2 border-white hover:bg-white hover:text-blue transition ease-in-out'
     const [color, setColor] = useState(false);
     const { isModalOpen, openModal, closeModal } = useModal();
 
@@ -32,23 +32,16 @@ export const Navigation = () => {
                 </div>
 
                 <ul className="hidden md:flex space-x-10">
-                    {routes.map(({ to, path, name }) => (
+                    {routes.routes.map(({ path, id }) => (
                         <li key={path}>
                             <NavLink
-                                to={to}
-                                className={ ({ isActive }) => isActive ? `isActive ${classesLink}` : `${classesLink}` }>{name}
+                                to={path as string}
+                                className={ ({ isActive }) => isActive ? `isActive ${classesLink}` : `${classesLink}` }>{id}
                             </NavLink>
                         </li>
                     ))}
                 </ul>
             </nav>
-
-            <Routes>
-                <Route path="/*" element={<Navigate to="/home" replace />}/>
-                {routes.map(({ path, Component }) => (
-                    <Route key={path} path={path} element={<Component />} />
-                ))}
-            </Routes>
         </div>
     )
 }

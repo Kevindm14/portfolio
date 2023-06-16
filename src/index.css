@@ -16,5 +16,4 @@ body, html {
 
 .isActive:hover {
     transition: all 0.3s ease-in-out;
-    @apply text-blue bg-white;
 }

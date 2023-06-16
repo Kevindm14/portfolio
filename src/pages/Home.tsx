@@ -2,10 +2,12 @@ import { TypeAnimation } from 'react-type-animation';
 import profilePhoto from '../assets/profile.jpg';
 import { skills } from '../utils/skills';
 import { Badge } from '../components/Badge/Badge';
+import { Navigation } from '../components';
 
-export const Home = () => {
+export function Component() {
     return (
-        <>
+        <div>
+            <Navigation />
             <div className="flex flex-col pt-32 pb-52 p-5 sm:px-12 md:px-20 items-center text-white">
                 <div className="mb-20">
                     <h1 className="text-green mb-10 lg:w-[700px] mx-auto font-extrabold text-6xl lg:text-9xl uppercase text-center">Hello my name is</h1>
@@ -48,12 +50,13 @@ export const Home = () => {
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 justify-center gap-10'>
                         {skills.map(({ name, tech }) =>
-                            <div className=''>
+                            <div key={name}>
                                 <h3 className='text-gray font-bold mb-2'>{name}</h3>
 
                                 <div className='flex flex-wrap gap-1'>
                                     {tech.map(({ name }) => (
                                         <Badge
+                                            key={name}
                                             className='mb-2'
                                             color='green'
                                             bg='green'>
@@ -66,8 +69,8 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 
-export default Home;
+Component.displayName = 'Home';
