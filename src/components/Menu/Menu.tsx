@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom"
-import { routes } from "../../router/routes"
 import { IoClose } from "react-icons/io5"
 
 interface Props {
@@ -10,8 +8,15 @@ interface Props {
 export const Menu = ({ isOpen, onClose }: Props) => {
     if (!isOpen) return null;
 
+    const scrollTo = (id: string) => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: 'smooth' });
+
+        onClose();
+    }
+
     return (
-        <div className="bg-blue w-full left-0 top-0 right-0 h-screen fixed flex flex-col justify-center px-5 py-3">
+        <div className="bg-neutrals-900 w-full left-0 top-0 right-0 h-screen fixed flex flex-col justify-center px-5 py-3">
             <IoClose
                 size={30}
                 style={{
@@ -24,15 +29,9 @@ export const Menu = ({ isOpen, onClose }: Props) => {
                 onClick={onClose}
             />
             <ul className="flex flex-col items-center gap-10 text-4xl uppercase font-extrabold">
-                {routes.routes.map(({ path, id }) => (
-                    <li key={path}>
-                        <NavLink
-                            onClick={onClose}
-                            to={path as string}
-                            className={ ({ isActive }) => isActive ? "isActive" : "" }>{id}
-                        </NavLink>
-                    </li>
-                ))}
+                <li>
+                    <button onClick={() => scrollTo('contact')} className="">Contact</button>
+                </li>
             </ul>
         </div>
     )

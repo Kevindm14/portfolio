@@ -17,3 +17,24 @@ body, html {
 .isActive:hover {
     transition: all 0.3s ease-in-out;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+    background-color: #f5f5f5;
+}
+
+/* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #2E364F;
+}
+
+/* Color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: #96A1C0;
+}
+
+/* On hover, the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
