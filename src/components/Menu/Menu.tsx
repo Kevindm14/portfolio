@@ -24,17 +24,15 @@ export const Menu = ({ isOpen, onClose }: Props) => {
                 onClick={onClose}
             />
             <ul className="flex flex-col items-center gap-10 text-4xl uppercase font-extrabold">
-                {
-                    routes.map(({ to, path, name }) => (
-                        <li key={path}>
-                            <NavLink
-                                onClick={onClose}
-                                to={to}
-                                className={ ({ isActive }) => isActive ? "isActive" : "" }>{name}
-                            </NavLink>
-                        </li>
-                    ))
-                }
+                {routes.routes.map(({ path, id }) => (
+                    <li key={path}>
+                        <NavLink
+                            onClick={onClose}
+                            to={path as string}
+                            className={ ({ isActive }) => isActive ? "isActive" : "" }>{id}
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </div>
     )
