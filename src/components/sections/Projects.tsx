@@ -1,8 +1,39 @@
+import Portfolio from '../../assets/portfolio.png';
+import UrlShort from '../../assets/url_short.png';
+import Links from '../../assets/links.png';
+import { ProjectCarrousel } from '../ProjectCarrousel/ProjectCarrousel';
+
+export interface Project {
+	title: string;
+	date: string;
+	link: string;
+	image: string;
+	typeProject: string;
+}
+
 export const Projects = () => {
-	const projects: string[] = [
-		"https://images.unsplash.com/photo-1686731207846-67503b8bb60d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-		"https://plus.unsplash.com/premium_photo-1686498958763-3c45c5d137c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-		"https://images.unsplash.com/photo-1682687982470-8f1b0e79151a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+	const projects: Project[] = [
+		{
+			title: 'My Portfolio',
+			date: '',
+			link: 'https://github.com/Kevindm14/portfolio',
+			image: Portfolio,
+			typeProject: 'Website'
+		},
+		{
+			title: 'Url Shortener Landing Page',
+			date: '',
+			link: '',
+			image: UrlShort,
+			typeProject: 'Website'
+		},
+		{
+			title: 'Links Connect',
+			date: '',
+			link: 'https://github.com/Kevindm14/alllinks',
+			image: Links,
+			typeProject: 'Website'
+		},
 	]
 
 	return (
@@ -10,13 +41,7 @@ export const Projects = () => {
 			<div className="pt-20 pb-52 w-full">
 				<h2 className='mb-32 font-extrabold text-green text-6xl uppercase text-center'>PROJECTS</h2>
 
-				<div className='cards grid grid-cols-1 md:grid-cols-3 gap-10'>
-					{projects.map((project) => (
-						<div key={project} className='flex justify-between h-[400px] md:h-[500px] lg:h-[600px]'>
-							<img src={project} className="object-cover w-full rounded-md" alt="project"/>
-						</div>
-					))}
-				</div>
+				<ProjectCarrousel projects={projects} />
 			</div>
 		</section>
 	)
