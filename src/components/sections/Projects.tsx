@@ -23,14 +23,14 @@ export const Projects = () => {
 		{
 			title: 'Url Shortener Landing Page',
 			date: '',
-			link: '',
+			link: 'https://url-shortening-nine.vercel.app/',
 			image: UrlShort,
 			typeProject: 'Website'
 		},
 		{
 			title: 'Links Connect',
 			date: '',
-			link: 'https://github.com/Kevindm14/alllinks',
+			link: 'https://link-connect.vercel.app/',
 			image: Links,
 			typeProject: 'Website'
 		},
