@@ -27,13 +27,6 @@ export const Projects = () => {
 			image: UrlShort,
 			typeProject: 'Website'
 		},
-		{
-			title: 'Links Connect',
-			date: '',
-			link: 'https://link-connect.vercel.app/',
-			image: Links,
-			typeProject: 'Website'
-		},
 	]
 
 	return (
