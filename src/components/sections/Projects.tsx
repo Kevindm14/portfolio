@@ -1,6 +1,5 @@
 import Portfolio from '../../assets/portfolio.png';
 import UrlShort from '../../assets/url_short.png';
-import Links from '../../assets/links.png';
 import { ProjectCarrousel } from '../ProjectCarrousel/ProjectCarrousel';
 
 export interface Project {
