@@ -30,7 +30,6 @@ export default {
         50: '#FFFEF9',
       },
     },
-    extend: {},
   },
   plugins: [],
 }

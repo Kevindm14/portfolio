@@ -1,5 +1,3 @@
-import Portfolio from '../../assets/portfolio.png';
-import UrlShort from '../../assets/url_short.png';
 import { ProjectCarrousel } from '../ProjectCarrousel/ProjectCarrousel';
 
 export interface Project {
@@ -16,14 +14,14 @@ export const Projects = () => {
       title: 'My Portfolio',
       date: '',
       link: 'https://github.com/Kevindm14/portfolio',
-      image: Portfolio,
+      image: '',
       typeProject: 'Website',
     },
     {
       title: 'Url Shortener Landing Page',
       date: '',
       link: 'https://url-shortening-nine.vercel.app/',
-      image: UrlShort,
+      image: '',
       typeProject: 'Website',
     },
   ];
