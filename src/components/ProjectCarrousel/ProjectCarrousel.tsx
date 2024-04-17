@@ -1,10 +1,10 @@
-import { Project } from '../sections/Projects';
+import { IProject } from "../../utils/interfaces/IProject";
 
-interface Props {
-  projects: Project[];
+interface ProjectCarrouselProps {
+  projects: IProject[];
 }
 
-export const ProjectCarrousel = ({ projects }: Props) => {
+export const ProjectCarrousel = ({ projects }: ProjectCarrouselProps) => {
   return (
     <div className="flex justify-center gap-7 select-none flex-wrap">
       {projects.map(({ title, date, image, typeProject, link }) => (
@@ -13,7 +13,7 @@ export const ProjectCarrousel = ({ projects }: Props) => {
           className="relative aspect-[2/3] h-[30rem] rounded-md overflow-hidden"
           style={{ backgroundColor: 'rgb(52, 69, 92)', opacity: 1 }}
         >
-          <a href={link} target="_blank" className="group">
+          <a href={link} target="_blank" className="group" rel="noreferrer">
             <div className="absolute z-10 text-white inset-0 flex flex-col items-center justify-center bg-neutrals-900/50 p-4 text-center opacity-0 backdrop-blur-sm transition-all duration-300 hover:opacity-100 group-focus-visible:opacity-100 gap-y-2">
               <div className="overflow-hidden">
                 <p className="translate-y-full text-xs transition-transform duration-300 group-hover:translate-y-0 group-focus-visible:translate-y-0 text-neutrals-50/90 uppercase">
