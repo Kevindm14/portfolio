@@ -1,24 +1,14 @@
-import {About, Contact, Hero, Projects, Skills} from "../../components/sections";
+import { Navigation } from '../../components';
+import { About, Hero } from '../../components/sections';
 
 export function Component() {
-    return (
-        <div>
-            {/* Hero */}
-            <Hero />
-
-            {/* About me */}
-            <About />
-
-            {/* Skills */}
-            <Skills />
-
-            {/* Projects */}
-            <Projects />
-
-            {/* Contact */}
-            <Contact />
-        </div>
-    )
+  return (
+    <>
+      <Navigation />
+      <Hero />
+      <About />
+    </>
+  );
 }
 
 Component.displayName = 'Home';

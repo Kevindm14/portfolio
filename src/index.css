@@ -2,47 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html {
-    height: 100%;
-    scroll-behavior: smooth;
-    word-break: break-word;
-    margin: 0;
-    padding: 0;
-    @apply bg-purple;
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
 }
 
 ::selection {
-    color: #060918;
-    background: #6919FF;
+  color: #060918;
+  background: #6919ff;
 }
 
-
 .isActive {
-    @apply text-white;
-    transition: all 0.3s ease-in-out;
+  @apply text-white;
+  transition: all 0.3s ease-in-out;
 }
 
 .isActive:hover {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-::-webkit-scrollbar {
-    width: 15px;
-    height: 8px;
-    background-color: #f5f5f5;
+.switch-darkmode {
+  position: fixed;
+  border: 2px solid #6919ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  top: 110px;
+  right: 50px;
+  background: #000;
+  border-radius: 10%;
+  z-index: 50;
+  cursor: pointer;
+  box-shadow:
+    0 0 4px #fff,
+    0 0 3px #fff,
+    0 0 6px #6919ff,
+    0 0 7px #6919ff,
+    0 0 9px #6919ff,
+    0 0 9px #6919ff,
+    0 0 11px #6919ff;
 }
 
-/* Background color of the scrollbar track */
-::-webkit-scrollbar-track {
-    background-color: #2E364F;
+.switch-darkmode:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #6919ff;
+  height: 107px;
+  top: -110px;
+  box-shadow:
+    0 0 4px #fff,
+    0 0 3px #fff,
+    0 0 6px #6919ff,
+    0 0 7px #6919ff,
+    0 0 9px #6919ff,
+    0 0 9px #6919ff,
+    0 0 11px #6919ff;
 }
 
-/* Color of the scrollbar handle */
-::-webkit-scrollbar-thumb {
-    background-color: #96A1C0;
-}
-
-/* On hover, the scrollbar handle */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+.switch-darkmode .moon {
+  filter: drop-shadow(0px 0px 3px #116466);
 }

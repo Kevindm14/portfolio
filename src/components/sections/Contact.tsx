@@ -3,7 +3,7 @@ import {RiLinkedinFill} from "react-icons/ri";
 
 export const Contact = () => {
 	return (
-		<section className="bg-neutrals-800 flex flex-col lg:flex-row md:px-20 px-5" id='contact'>
+		<section className="bg-black flex flex-col lg:flex-row md:px-20 px-5" id='contact'>
 			<div className="flex flex-col py-20 w-full justify-center text-center space-y-10">
 				<h1 className="text-6xl uppercase w-80 font-extrabold mx-auto text-green">Get in Touch</h1>
 
