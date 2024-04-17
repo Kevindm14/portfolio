@@ -1,0 +1,62 @@
+.g-cloud-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #ff80b3)
+    drop-shadow(0px 0px 5px #ff4d94)
+    drop-shadow(0px 0px 10px #ff0066);
+}
+
+.aws-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #ff9900)
+    drop-shadow(0px 0px 5px #ff9900)
+    drop-shadow(0px 0px 10px #ff9900);
+}
+
+.react-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px gray)
+    drop-shadow(0px 0px 1px #00d8ff)
+    drop-shadow(0px 0px 5px #00d8ff)
+    drop-shadow(0px 0px 10px #00d8ff)
+}
+
+.nextjs-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px gray)
+    drop-shadow(0px 0px 1px #FFF)
+    drop-shadow(0px 0px 5px #FFF)
+    drop-shadow(0px 0px 10px #FFF)
+}
+
+.nodejs-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px gray)
+    drop-shadow(0px 0px 1px #68A063)
+    drop-shadow(0px 0px 5px #68A063)
+    drop-shadow(0px 0px 10px #68A063)
+}
+
+.stimulus-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px gray)
+    drop-shadow(0px 0px 5px #77E8B9)
+    drop-shadow(0px 0px 10px #77E8B9)
+}
+
+.playwright-neon {
+  filter:
+    drop-shadow(0px 0px 1px #fff)
+    drop-shadow(0px 0px 1px gray)
+    drop-shadow(0px 0px 1px #68A063)
+    drop-shadow(0px 0px 5px #68A063)
+    drop-shadow(0px 0px 10px #ff9900)
+}

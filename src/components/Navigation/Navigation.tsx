@@ -1,44 +1,51 @@
-import { useState } from "react"
-import { GiHamburgerMenu } from "react-icons/gi"
-import { Menu } from "../Menu/Menu"
-import { useModal } from "../../hooks/useModal"
+import { useEffect, useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { NavLink } from 'react-router-dom';
+import { useModal } from '../../hooks/useModal';
+import { Menu } from '../Menu/Menu';
+import { Container } from '../styles/Container';
 
 export const Navigation = () => {
-    const [color, setColor] = useState(false);
-    const { isModalOpen, openModal, closeModal } = useModal();
+  const [color, setColor] = useState(false);
+  const { isModalOpen, openModal, closeModal } = useModal();
+  const classesNav = 'py-5 bg-spaceCadet text-white px-5 sm:px-12 md:px-52 font-bold flex justify-between items-center top-0 sticky transition ease-in-out delay-150 z-40 relative';
+  const classesLink = 'py-2 px-5 text-white rounded-lg hover:bg-white hover:text-neutrals-900 transition ease-in-out duration-300';
 
-    const classesNav = 'py-5 text-white px-5 sm:px-12 font-bold md:px-20 flex justify-between items-center top-0 sticky transition ease-in-out delay-150 z-50 relative'
-    const classesLink = 'py-2 px-5 text-white border-2 border-white hover:bg-white hover:text-neutrals-900 transition ease-in-out'
+  useEffect(() => {
+    window.addEventListener('scroll', () => setColor(window.scrollY >= 90));
 
-    window.addEventListener('scroll', () => setColor(window.scrollY >= 90))
+    return () => {
+      window.removeEventListener('scroll', () => setColor(window.scrollY >= 90));
+    };
+  }, []);
 
-    const scrollTo = (id: string) => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth' });
-    }
+  return (
+    <nav className={color ? `${classesNav} backdrop-blur-3xl bg-transparent` : classesNav}>
+      <Container className="flex justify-end items-center">
+        <div className="md:hidden">
+          <GiHamburgerMenu size={30} style={{ cursor: 'pointer' }} onClick={() => openModal('menu')} />
 
-    return (
-        <nav className={ color ? `${classesNav} backdrop-blur-3xl bg-transparent` : classesNav }>
-            <h1 className="text-lg font-extrabold">Portfolio</h1>
+          <Menu isOpen={isModalOpen.menu} onClose={() => closeModal('menu')} />
+        </div>
 
-            <div className="md:hidden">
-                <GiHamburgerMenu
-                    size={30}
-                    style={{ cursor: "pointer" }}
-                    onClick={() => openModal('menu')}
-                />
-
-                <Menu
-                    isOpen={isModalOpen.menu}
-                    onClose={() => closeModal('menu')}
-                />
-            </div>
-
-            <ul className="hidden md:flex space-x-10">
-                <li>
-                    <button onClick={() => scrollTo('contact')} id="contact-tab" className={classesLink}>Contact</button>
-                </li>
-            </ul>
-        </nav>
-    )
-}
+        <ul className="hidden md:flex gap-5 items-center">
+          <li>
+            <NavLink to="/" className={({ isActive }) => isActive ? `text-[#3E4140] py-2 px-5 rounded-lg bg-white` : classesLink} >
+              .Inicio()
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/projects" className={({ isActive }) => isActive ? `text-[#3E4140] py-2 px-5 rounded-lg bg-white` : classesLink} >
+              .Proyectos()
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? `text-[#3E4140] py-2 px-5 rounded-lg bg-white` : classesLink} >
+              .Contacto()
+            </NavLink>
+          </li>
+        </ul>
+      </Container>
+    </nav>
+  );
+};

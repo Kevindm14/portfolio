@@ -7,6 +7,11 @@ export default {
   theme: {
     colors: {
       black: '#000000',
+      spaceCadet: '#171738',
+      federalBlue: '#2E1760',
+      zaffre: '#3423A6',
+      glaucous: '#7180B9',
+      honeyDew: '#DFF3E4',
       purple: '#6919FF',
       green: '#00FFA3',
       white: '#FFFFFF',
@@ -25,7 +30,6 @@ export default {
         50: '#FFFEF9',
       },
     },
-    extend: {},
   },
   plugins: [],
 }
