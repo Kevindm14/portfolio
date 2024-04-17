@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section className="flex bg-spaceCadet flex-col md:flex-row items-center md:gap-80 h-[900px] justify-center text-white">
       <Container className="flex flex-col items-center lg:flex-row lg:justify-between">
-        <div className="mb-32 lg:mb-0">
+        <div className="mb-32 lg:mb-0 relative">
           <h1 className="text-zaffre mx-auto font-extrabold lg:text-2xl">Hola, Soy</h1>
           <h2 className="text-white lg:mb-4 mx-auto font-extrabold text-6xl">
             Kevin <span className="text-zaffre">Diaz</span>
