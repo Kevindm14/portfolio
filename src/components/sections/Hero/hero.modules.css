@@ -8,13 +8,8 @@
   56%,
   100% {
     box-shadow:
-      0 0 4px #fff,
-      0 0 3px #fff,
-      0 0 6px #DFF3E4,
-      0 0 7px #DFF3E4,
-      0 0 9px #DFF3E4,
-      0 0 9px #DFF3E4,
-      0 0 11px #DFF3E4;
+      0 0 15px #DFF3E4,
+      inset 0 0 15px #DFF3E4
   }
 
   20%,
@@ -32,13 +27,8 @@
   33%,
   100% {
     box-shadow:
-      0 0 4px #fff,
-      0 0 3px #fff,
-      0 0 6px #3423A6,
-      0 0 7px #3423A6,
-      0 0 9px #3423A6,
-      0 0 9px #3423A6,
-      0 0 11px #3423A6;
+      0 0 15px #3423A6,
+      inset 0 0 15px #3423A6
   }
 
   30%,
@@ -53,4 +43,7 @@
 
 .flickering {
   animation: flicker 3s infinite alternate;
+}
+
+.shadow {
 }
