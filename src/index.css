@@ -13,7 +13,7 @@ html {
 
 ::selection {
   color: #060918;
-  background: #6919ff;
+  @apply bg-zaffre;
 }
 
 .isActive {

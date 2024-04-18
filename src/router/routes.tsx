@@ -22,7 +22,7 @@ export const routes = createBrowserRouter([
         id: 'Contact',
         index: true,
         path: '/contact',
-        lazy: () => import('../pages/Home/Home.tsx'),
+        lazy: () => import('../pages/Contact/Contact.tsx'),
       },
       {
         path: '*',
