@@ -1,5 +1,5 @@
-import { projects } from '../../utils/data/projects';
-import { ProjectCarrousel } from '../ProjectCarrousel/ProjectCarrousel';
+import { projects } from '@/utils/data/projects';
+import { ProjectCarrousel } from '@/components/ProjectCarrousel';
 
 export const Projects = () => {
   return (

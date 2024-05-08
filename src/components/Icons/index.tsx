@@ -5,3 +5,4 @@ export const Icons = ({ icon, ...rest }: IconProps) => {
 };
 
 export default Icons;
+export { IconsNav } from './IconsNav';

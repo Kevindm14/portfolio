@@ -10,4 +10,7 @@ export const IconsNav = {
   Contact: ({ ...props }) => {
     return <Icon icon="typcn:mail" {...props} />;
   },
+  HamburguerMenu: ({ ...props }) => {
+    return <Icon icon="mingcute:menu-fill" {...props} />;
+  }
 };

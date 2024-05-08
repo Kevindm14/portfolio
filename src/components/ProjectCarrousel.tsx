@@ -1,4 +1,4 @@
-import { IProject } from "../../utils/interfaces/IProject";
+import { IProject } from "@/utils/interfaces/IProject";
 
 interface ProjectCarrouselProps {
   projects: IProject[];

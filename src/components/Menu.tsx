@@ -1,4 +1,5 @@
-import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { MenuIcons } from "./Icons/IconsMenu";
 
 interface Props {
   isOpen: boolean;
@@ -16,8 +17,12 @@ export const Menu = ({ isOpen, onClose }: Props) => {
   };
 
   return (
-    <div className="bg-neutrals-900 w-full left-0 top-0 right-0 h-screen fixed flex flex-col justify-center px-5 py-3">
-      <IoClose
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.3 }}}
+      className="bg-neutrals-900 w-full left-0 top-0 right-0 h-screen fixed flex flex-col justify-center px-5 py-3"
+    >
+      <MenuIcons.Close
         size={30}
         style={{
           color: "white",
@@ -35,6 +40,6 @@ export const Menu = ({ isOpen, onClose }: Props) => {
           </button>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };

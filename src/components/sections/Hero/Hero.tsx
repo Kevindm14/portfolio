@@ -1,8 +1,8 @@
-import { Container } from '../../styles/Container';
+import { Container } from '@/components/Container';
+import { IconsJS } from '@/components/Icons/IconsJS';
+import { IconsLanguages } from '@/components/Icons/IconsLanguages';
 import { motion } from 'framer-motion';
 import './hero.modules.css';
-import { IconsJS } from '../../Icons/JavaScript';
-import { IconsLanguages } from '../../Icons/Languages';
 
 export const Hero = () => {
   return (
@@ -58,7 +58,7 @@ export const Hero = () => {
             className={`flickering2 border-4 border-zaffre w-full h-full md:w-[300px] md:h-[300px] xl:h-[400px] xl:w-[400px] absolute left-10 -bottom-10 rounded-lg z-10`}
           />
 
-          <img className="w-full md:w-[400px] rounded-3xl relative z-30" src="/profile.jpg" alt="profile" />
+          <img className="w-full md:w-[400px] rounded-3xl relative z-30" src="/profile.webp" alt="profile" />
         </div>
       </Container>
     </section>

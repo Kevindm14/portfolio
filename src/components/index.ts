@@ -1,3 +1,3 @@
-export {Navigation} from './Navigation/Navigation';
-export {Menu} from './Menu/Menu';
-export {Loading} from './Loading/Loading';
+export { Loading } from './Loading';
+export { Menu } from './Menu';
+export { Navigation } from './Navigation/Navigation';
